@@ -1,1 +1,2 @@
-console.log('2134')
+import A from './A'
+import B from './B'
