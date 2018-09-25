@@ -1,0 +1,23 @@
+{
+  "name": "webpack-learn",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luoquanquan/webpack-learn.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luoquanquan/webpack-learn/issues"
+  },
+  "homepage": "https://github.com/luoquanquan/webpack-learn#readme",
+  "devDependencies": {
+    "webpack": "^3.10.0"
+  }
+}
