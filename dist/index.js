@@ -60,34 +60,23 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return a; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return b; });
-var a = 1
-var b = 2
+var a = __webpack_require__(1)
 
-console.log('a: ', 1)
+console.log(a)
 
 /***/ }),
 /* 1 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__a_js__ = __webpack_require__(0);
-
-
-
-
-console.log('index: ', __WEBPACK_IMPORTED_MODULE_0__a_js__["a"])
-console.log('index: ', __WEBPACK_IMPORTED_MODULE_0__a_js__["b"])
+console.log('a')
+module.exports = 1
 
 /***/ })
 /******/ ]);
