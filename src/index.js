@@ -1,3 +1,3 @@
-var a = require('./a.js')
-
-console.log(a)
+require(['./a.js'], function(a) {
+    console.log(a)
+})

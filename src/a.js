@@ -1,2 +1,3 @@
-console.log('a')
-module.exports = 1
+define(function(params) {
+    return 1
+});
