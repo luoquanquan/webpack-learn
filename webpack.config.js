@@ -12,16 +12,8 @@ module.exports = {
             {
                 test: /\.js$/,
                 exclude: /node_moudles/,
-                use: {
-                    loader: 'babel-loader',
-                    options: {
-                        presets: [
-                            ['env', { targets: { browsers: ['> 50%'] }}]
-                        ]
-                    }
-                }
+                use: 'babel-loader'
             }
         ]
     }
-    
 }

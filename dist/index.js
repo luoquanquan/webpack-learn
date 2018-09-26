@@ -65,14 +65,11 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-
-
-var a = 1;
-var func = function func() {};
-var c = '5';
+const a = 1;
+const func = () => {};
+let c = '5';
 
 /***/ })
 /******/ ]);
