@@ -1,1 +1,9 @@
-{}
+{
+    "presets": [
+        [
+            "env", {
+                "broswers": [ "last 1 versions" ]
+            }
+        ]
+    ]
+}
