@@ -1,3 +1,3 @@
-require(['./a.js'], function(a) {
-    console.log(a)
-})
+const a = 1
+const func = () => {}
+let c = '5'
