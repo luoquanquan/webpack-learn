@@ -73,7 +73,8 @@
 var a = 1;
 var func = function func() {};
 var c = '5';
-
+var d = [1, 2, 3];
+console.log(d.includes(4));
 var wrapper = function wrapper() {
     return new Promise(function (resove, reject) {
         setTimeout(function () {
