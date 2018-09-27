@@ -74,5 +74,17 @@ var a = 1;
 var func = function func() {};
 var c = '5';
 
+var wrapper = function wrapper() {
+    return new Promise(function (resove, reject) {
+        setTimeout(function () {
+            resovle(1);
+        }, 1e3);
+    });
+};
+
+wrapper().then(function (data) {
+    console.log(data);
+});
+
 /***/ })
 /******/ ]);
