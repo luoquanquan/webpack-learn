@@ -1,11 +1,15 @@
+const webpack = require('webpack')
 const path = require('path')
 
 module.exports = {
-    entry: './src/index.js',
+    entry: {
+        pageA: './src/pageA.js'
+    },
     output: {
         path: path.resolve(__dirname, 'dist'),
         publicPath: './dist/',
-        filename: 'index.js'
+        filename: '[name].bundle.js',
+        chunkFilename: '[name].chunk.js'
     },
     module: {
         rules: [
@@ -15,5 +19,11 @@ module.exports = {
                 use: 'babel-loader'
             }
         ]
-    }
+    },
+    plugins: [
+        new webpack.optimize.CommonsChunkPlugin({
+            name: 'common',
+            minChunks: 2
+        })
+    ]
 }
