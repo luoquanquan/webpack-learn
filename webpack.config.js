@@ -24,6 +24,10 @@ module.exports = {
     },
     plugins: [
         new webpack.optimize.CommonsChunkPlugin({
+            name: 'common',
+            minChunks: 2
+        }),
+        new webpack.optimize.CommonsChunkPlugin({
             name: 'vender',
             minChunks: Infinity
         }),
