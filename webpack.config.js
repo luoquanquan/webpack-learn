@@ -26,6 +26,10 @@ module.exports = {
         new webpack.optimize.CommonsChunkPlugin({
             name: 'vender',
             minChunks: Infinity
-        })
+        }),
+        new webpack.optimize.CommonsChunkPlugin({
+            name: 'manifest', // 这个名字要用 entry 里边没有的名字
+            minChunks: Infinity
+        }),
     ]
 }
