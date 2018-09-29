@@ -25,7 +25,8 @@ module.exports = {
     plugins: [
         new webpack.optimize.CommonsChunkPlugin({
             name: 'common',
-            minChunks: 2
+            minChunks: 2,
+            chunks: ['pageA', 'pageB']
         }),
         new webpack.optimize.CommonsChunkPlugin({
             name: 'vender',
