@@ -29,12 +29,12 @@ module.exports = {
             chunks: ['pageA', 'pageB']
         }),
         new webpack.optimize.CommonsChunkPlugin({
-            name: 'vender',
+            names: ['vender', 'manifest'],
             minChunks: Infinity
         }),
-        new webpack.optimize.CommonsChunkPlugin({
-            name: 'manifest', // 这个名字要用 entry 里边没有的名字
-            minChunks: Infinity
-        }),
+        // new webpack.optimize.CommonsChunkPlugin({
+        //     name: 'manifest', // 这个名字要用 entry 里边没有的名字
+        //     minChunks: Infinity
+        // }),
     ]
 }
