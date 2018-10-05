@@ -29,7 +29,7 @@
 /******/
 /******/ 	// objects to store loaded and loading chunks
 /******/ 	var installedChunks = {
-/******/ 		2: 0
+/******/ 		3: 0
 /******/ 	};
 /******/
 /******/ 	// The require function
@@ -86,7 +86,7 @@
 /******/ 		if (__webpack_require__.nc) {
 /******/ 			script.setAttribute("nonce", __webpack_require__.nc);
 /******/ 		}
-/******/ 		script.src = __webpack_require__.p + "" + ({"0":"subpageA","1":"vender"}[chunkId]||chunkId) + ".chunk.js";
+/******/ 		script.src = __webpack_require__.p + "" + ({"0":"vender","1":"subpageB","2":"subpageA"}[chunkId]||chunkId) + ".chunk.js";
 /******/ 		var timeout = setTimeout(onScriptComplete, 120000);
 /******/ 		script.onerror = script.onload = onScriptComplete;
 /******/ 		function onScriptComplete() {
@@ -153,12 +153,12 @@
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var page = 'subPageA'
 if (page === 'subPageA') {
-    __webpack_require__.e/* import() */(0).then(__webpack_require__.bind(null, 1))
+    __webpack_require__.e/* import() */(2).then(__webpack_require__.bind(null, 1))
         .then(subPageA => {
             console.log(subPageA)
         })
 } else {
-    __webpack_require__.e/* import() */(0).then(__webpack_require__.bind(null, 2))
+    __webpack_require__.e/* import() */(1).then(__webpack_require__.bind(null, 2))
         .then(subPageB => {
             console.log(subPageB)
         })
@@ -167,7 +167,7 @@ if (page === 'subPageA') {
 // import * as _ from 'lodash'
 
 // 这一句只是加载 lodash
-__webpack_require__.e/* require.ensure */(1).then((function() {
+__webpack_require__.e/* require.ensure */(0).then((function() {
     // 使用这一个 require 才会执行加载的代码
     var _ = __webpack_require__(3)
     _.join([1,2,3], 4)

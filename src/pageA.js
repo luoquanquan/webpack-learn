@@ -9,7 +9,7 @@ if (page === 'subPageA') {
         })
 } else {
     import(
-        /* webpackChunkName: 'subpageA' */
+        /* webpackChunkName: 'subpageB' */
         './subPageB'
     )
         .then(subPageB => {
