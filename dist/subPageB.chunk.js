@@ -29,6 +29,7 @@ exports.default = 'SubPageB';
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+// 这个模块中有 ModuleA
 exports.default = "ModuleA";
 
 /***/ })
