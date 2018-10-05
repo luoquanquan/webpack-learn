@@ -5,6 +5,5 @@
                 "broswers": [ "last 1 versions" ]
             }
         ]
-    ],
-    "plugins": ["transform-runtime"]
+    ]
 }
