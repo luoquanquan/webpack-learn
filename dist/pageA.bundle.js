@@ -171,8 +171,11 @@ Object.defineProperty(exports, "__esModule", {
 undefined/*! require.include ./moduleA.js */;
 var page = 'a';
 if (page === 'a') {
+    // 当在外层的 require.ensure 依赖中写了依赖的模块时, 浏览器会直接加载这个模块但是不会执行
+    // 当内部的 require 执行是, 加载的模块才会执行
+    // 当只有内部的 require 执行时, 会先加载需求的模块再执行
     __webpack_require__.e/* require.ensure */(2).then((function () {
-        // var subPageA = require('./subPageA.js')
+        var subPageA = __webpack_require__(3);
         // console.log(subPageA)
     }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 } else {

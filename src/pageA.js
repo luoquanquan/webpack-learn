@@ -1,8 +1,11 @@
 require.include('./moduleA.js')
 const  page = 'a'
 if(page === 'a') {
-    require.ensure(['./subPageA.js'], function() {
-        // var subPageA = require('./subPageA.js')
+    // 当在外层的 require.ensure 依赖中写了依赖的模块时, 浏览器会直接加载这个模块但是不会执行
+    // 当内部的 require 执行是, 加载的模块才会执行
+    // 当只有内部的 require 执行时, 会先加载需求的模块再执行
+    require.ensure([], function() {
+        var subPageA = require('./subPageA.js')
         // console.log(subPageA)
     }, 'subPageA')
 } else {
