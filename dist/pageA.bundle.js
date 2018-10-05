@@ -29,7 +29,7 @@
 /******/
 /******/ 	// objects to store loaded and loading chunks
 /******/ 	var installedChunks = {
-/******/ 		1: 0
+/******/ 		3: 0
 /******/ 	};
 /******/
 /******/ 	// The require function
@@ -142,24 +142,12 @@
 /******/ 	__webpack_require__.oe = function(err) { console.error(err); throw err; };
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 2);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
-/******/ ([
-/* 0 */
-/***/ (function(module, exports, __webpack_require__) {
+/******/ ({
 
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = "ModuleA";
-
-/***/ }),
-/* 1 */,
-/* 2 */
+/***/ 3:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -168,63 +156,29 @@ exports.default = "ModuleA";
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-
-var _subPageA = __webpack_require__(3);
-
-var _subPageA2 = _interopRequireDefault(_subPageA);
-
-var _subPageB = __webpack_require__(4);
-
-var _subPageB2 = _interopRequireDefault(_subPageB);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+if (page === 'a') {
+    __webpack_require__.e/* require.ensure */(2).then((function () {
+        var subPageA = __webpack_require__(0);
+        console.log(subPageA);
+    }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+} else {
+    __webpack_require__.e/* require.ensure */(1).then((function () {
+        var subPageB = __webpack_require__(1);
+        console.log(subPageB);
+    }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+}
 
 // import * as _ from 'lodash'
 
+// 这一句只是加载 lodash
 __webpack_require__.e/* require.ensure */(0).then((function () {
-    var _ = __webpack_require__(1);
+    // 使用这一个 require 才会执行加载的代码
+    var _ = __webpack_require__(2);
     console.log(_);
 }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 
 exports.default = 'PageA';
 
-/***/ }),
-/* 3 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _moduleA = __webpack_require__(0);
-
-var _moduleA2 = _interopRequireDefault(_moduleA);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.default = 'SubPageA';
-
-/***/ }),
-/* 4 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _moduleA = __webpack_require__(0);
-
-var _moduleA2 = _interopRequireDefault(_moduleA);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.default = 'SubPageB';
-
 /***/ })
-/******/ ]);
+
+/******/ });

@@ -1,5 +1,14 @@
-import SubPageA from './subPageA'
-import SubPageB from './subPageB'
+if(page === 'a') {
+    require.ensure(['./subPageA.js'], function() {
+        var subPageA = require('./subPageA.js')
+        console.log(subPageA)
+    })
+} else {
+    require.ensure(['./subPageB.js'], function() {
+        var subPageB = require('./subPageB.js')
+        console.log(subPageB)
+    })
+}
 
 // import * as _ from 'lodash'
 
