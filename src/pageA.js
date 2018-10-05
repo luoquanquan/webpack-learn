@@ -2,8 +2,8 @@ require.include('./moduleA.js')
 const  page = 'a'
 if(page === 'a') {
     require.ensure(['./subPageA.js'], function() {
-        var subPageA = require('./subPageA.js')
-        console.log(subPageA)
+        // var subPageA = require('./subPageA.js')
+        // console.log(subPageA)
     }, 'subPageA')
 } else {
     require.ensure(['./subPageB.js'], function() {

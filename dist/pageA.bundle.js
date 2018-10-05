@@ -142,7 +142,7 @@
 /******/ 	__webpack_require__.oe = function(err) { console.error(err); throw err; };
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 2);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -159,8 +159,7 @@ exports.default = "ModuleA";
 
 /***/ }),
 /* 1 */,
-/* 2 */,
-/* 3 */
+/* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -173,12 +172,12 @@ undefined/*! require.include ./moduleA.js */;
 var page = 'a';
 if (page === 'a') {
     __webpack_require__.e/* require.ensure */(2).then((function () {
-        var subPageA = __webpack_require__(1);
-        console.log(subPageA);
+        // var subPageA = require('./subPageA.js')
+        // console.log(subPageA)
     }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 } else {
     __webpack_require__.e/* require.ensure */(1).then((function () {
-        var subPageB = __webpack_require__(2);
+        var subPageB = __webpack_require__(1);
         console.log(subPageB);
     }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 }

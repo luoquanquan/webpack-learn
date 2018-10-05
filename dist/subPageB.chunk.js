@@ -1,6 +1,6 @@
-webpackJsonp([1],{
-
-/***/ 2:
+webpackJsonp([1],[
+/* 0 */,
+/* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16,8 +16,8 @@ var _moduleA2 = _interopRequireDefault(_moduleA);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+console.log('subpageB');
 exports.default = 'SubPageB';
 
 /***/ })
-
-});
+]);
