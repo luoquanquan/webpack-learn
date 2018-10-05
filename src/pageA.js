@@ -2,12 +2,12 @@ if(page === 'a') {
     require.ensure(['./subPageA.js'], function() {
         var subPageA = require('./subPageA.js')
         console.log(subPageA)
-    })
+    }, 'subPageA')
 } else {
     require.ensure(['./subPageB.js'], function() {
         var subPageB = require('./subPageB.js')
         console.log(subPageB)
-    })
+    }, 'subPageB')
 }
 
 // import * as _ from 'lodash'
