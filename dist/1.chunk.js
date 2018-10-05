@@ -1,36 +1,23 @@
-webpackJsonp([1],{
-
-/***/ 1:
-/***/ (function(module, exports, __webpack_require__) {
+webpackJsonp([1],[
+/* 0 */,
+/* 1 */,
+/* 2 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__moduleA__ = __webpack_require__(4);
 
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _moduleA = __webpack_require__(22);
-
-var _moduleA2 = _interopRequireDefault(_moduleA);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.default = 'SubPageB';
+console.log('subpageB')
+/* harmony default export */ __webpack_exports__["default"] = ('SubPageB');
 
 /***/ }),
-
-/***/ 22:
-/***/ (function(module, exports, __webpack_require__) {
+/* 3 */,
+/* 4 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = "ModuleA";
+/* unused harmony default export */ var _unused_webpack_default_export = ("ModuleA");
 
 /***/ })
-
-});
+]);

@@ -86,7 +86,7 @@
 /******/ 		if (__webpack_require__.nc) {
 /******/ 			script.setAttribute("nonce", __webpack_require__.nc);
 /******/ 		}
-/******/ 		script.src = __webpack_require__.p + "" + ({"0":"vender","1":"subPageB","2":"subPageA"}[chunkId]||chunkId) + ".chunk.js";
+/******/ 		script.src = __webpack_require__.p + "" + ({"0":"vender"}[chunkId]||chunkId) + ".chunk.js";
 /******/ 		var timeout = setTimeout(onScriptComplete, 120000);
 /******/ 		script.onerror = script.onload = onScriptComplete;
 /******/ 		function onScriptComplete() {
@@ -142,59 +142,38 @@
 /******/ 	__webpack_require__.oe = function(err) { console.error(err); throw err; };
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 2);
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = "ModuleA";
-
-/***/ }),
-/* 1 */,
-/* 2 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-undefined/*! require.include ./moduleA.js */;
-var page = 'a';
-if (page === 'a') {
-    // 当在外层的 require.ensure 依赖中写了依赖的模块时, 浏览器会直接加载这个模块但是不会执行
-    // 当内部的 require 执行是, 加载的模块才会执行
-    // 当只有内部的 require 执行时, 会先加载需求的模块再执行
-    __webpack_require__.e/* require.ensure */(2).then((function () {
-        var subPageA = __webpack_require__(3);
-        // console.log(subPageA)
-    }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+var page = 'subPageA'
+if (page === 'subPageA') {
+    __webpack_require__.e/* import() */(2).then(__webpack_require__.bind(null, 1))
+        .then(subPageA => {
+            console.log(subPageA)
+        })
 } else {
-    __webpack_require__.e/* require.ensure */(1).then((function () {
-        var subPageB = __webpack_require__(1);
-        console.log(subPageB);
-    }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+    __webpack_require__.e/* import() */(1).then(__webpack_require__.bind(null, 2))
+        .then(subPageB => {
+            console.log(subPageB)
+        })
 }
 
 // import * as _ from 'lodash'
 
 // 这一句只是加载 lodash
-__webpack_require__.e/* require.ensure */(0).then((function () {
+__webpack_require__.e/* require.ensure */(0).then((function() {
     // 使用这一个 require 才会执行加载的代码
-    var _ = __webpack_require__(4);
-    _.join([1, 2, 3], 4);
-}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+    var _ = __webpack_require__(3)
+    _.join([1,2,3], 4)
+}).bind(null, __webpack_require__)).catch(__webpack_require__.oe)
 
-exports.default = 'PageA';
+/* harmony default export */ __webpack_exports__["default"] = ('PageA');
 
 /***/ })
 /******/ ]);

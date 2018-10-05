@@ -10,14 +10,5 @@ module.exports = {
         publicPath: './dist/',
         filename: '[name].bundle.js',
         chunkFilename: '[name].chunk.js'
-    },
-    module: {
-        rules: [
-            {
-                test: /\.js$/,
-                exclude: /node_moudles/,
-                use: 'babel-loader'
-            }
-        ]
     }
 }
