@@ -1,6 +1,6 @@
-webpackJsonp([5],{
+webpackJsonp([4],{
 
-/***/ 3:
+/***/ 6:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9,7 +9,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_lodash__);
 
 
-var page = 'subPageA'
+var page = 'subPageB'
 if (page === 'subPageA') {
     Promise.all/* import() */([__webpack_require__.e(1), __webpack_require__.e(2)]).then(__webpack_require__.bind(null, 1))
         .then(subPageA => {
@@ -22,8 +22,8 @@ if (page === 'subPageA') {
         })
 }
 
-/* harmony default export */ __webpack_exports__["default"] = ('PageA');
+/* harmony default export */ __webpack_exports__["default"] = ('PageB');
 
 /***/ })
 
-},[3]);
+},[6]);
