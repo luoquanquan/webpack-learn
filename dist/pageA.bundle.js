@@ -142,12 +142,28 @@
 /******/ 	__webpack_require__.oe = function(err) { console.error(err); throw err; };
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
-/******/ ({
+/******/ ([
+/* 0 */
+/***/ (function(module, exports, __webpack_require__) {
 
-/***/ 3:
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+// ModuleA 打包到了 pageA 里边
+exports.default = "ModuleA";
+
+/***/ }),
+/* 1 */,
+/* 2 */,
+/* 3 */,
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -156,14 +172,16 @@
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
+undefined/*! require.include ./moduleA.js */;
+
 if (page === 'a') {
     __webpack_require__.e/* require.ensure */(2).then((function () {
-        var subPageA = __webpack_require__(0);
+        var subPageA = __webpack_require__(1);
         console.log(subPageA);
     }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 } else {
     __webpack_require__.e/* require.ensure */(1).then((function () {
-        var subPageB = __webpack_require__(1);
+        var subPageB = __webpack_require__(2);
         console.log(subPageB);
     }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 }
@@ -173,12 +191,11 @@ if (page === 'a') {
 // 这一句只是加载 lodash
 __webpack_require__.e/* require.ensure */(0).then((function () {
     // 使用这一个 require 才会执行加载的代码
-    var _ = __webpack_require__(2);
+    var _ = __webpack_require__(3);
     console.log(_);
 }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 
 exports.default = 'PageA';
 
 /***/ })
-
-/******/ });
+/******/ ]);

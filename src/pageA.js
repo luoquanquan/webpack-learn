@@ -1,3 +1,5 @@
+require.include('./moduleA.js')
+
 if(page === 'a') {
     require.ensure(['./subPageA.js'], function() {
         var subPageA = require('./subPageA.js')
