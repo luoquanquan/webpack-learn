@@ -1,11 +1,17 @@
 var page = 'subPageA'
 if (page === 'subPageA') {
-    import( './subPageA')
+    import(
+        /* webpackChunkName: 'subpageA' */
+        './subPageA'
+    )
         .then(subPageA => {
             console.log(subPageA)
         })
 } else {
-    import( './subPageB')
+    import(
+        /* webpackChunkName: 'subpageA' */
+        './subPageB'
+    )
         .then(subPageB => {
             console.log(subPageB)
         })
