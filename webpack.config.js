@@ -17,7 +17,10 @@ module.exports = {
                 test: /.css$/,
                 use: [
                     {
-                        loader: 'style-loader/useable'
+                        loader: 'style-loader',
+                        options: {
+                            insertInto: '#app'
+                        }
                     },
                     {
                         loader: 'css-loader'
