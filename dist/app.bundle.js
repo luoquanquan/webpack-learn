@@ -150,8 +150,8 @@ function toComment(sourceMap) {
 /***/ (function(module, exports) {
 
 module.exports = css => {
-    console.log(css)
-    css = css.replace('blue', 'green')
+    // console.log(css)
+    // css = css.replace('blue', 'green')
     return css
 }
 
@@ -596,8 +596,8 @@ var update = __webpack_require__(2)(content, options);
 if(content.locals) module.exports = content.locals;
 
 if(false) {
-	module.hot.accept("!!../../node_modules/css-loader/index.js!./base.css", function() {
-		var newContent = require("!!../../node_modules/css-loader/index.js!./base.css");
+	module.hot.accept("!!../../node_modules/css-loader/index.js??ref--0-1!./base.css", function() {
+		var newContent = require("!!../../node_modules/css-loader/index.js??ref--0-1!./base.css");
 
 		if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 
@@ -755,8 +755,8 @@ var update = __webpack_require__(2)(content, options);
 if(content.locals) module.exports = content.locals;
 
 if(false) {
-	module.hot.accept("!!../../node_modules/css-loader/index.js!./common.css", function() {
-		var newContent = require("!!../../node_modules/css-loader/index.js!./common.css");
+	module.hot.accept("!!../../node_modules/css-loader/index.js??ref--0-1!./common.css", function() {
+		var newContent = require("!!../../node_modules/css-loader/index.js??ref--0-1!./common.css");
 
 		if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 

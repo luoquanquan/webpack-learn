@@ -25,7 +25,10 @@ module.exports = {
                         }
                     },
                     {
-                        loader: 'css-loader'
+                        loader: 'css-loader',
+                        options: {
+                            minimize: false
+                        }
                     }
                 ]
             }
