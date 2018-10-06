@@ -17,10 +17,10 @@ module.exports = {
                 test: /.css$/,
                 use: [
                     {
-                        loader: 'style-loader'
+                        loader: 'style-loader/url'
                     },
                     {
-                        loader: 'css-loader'
+                        loader: 'file-loader'
                     }
                 ]
             }
