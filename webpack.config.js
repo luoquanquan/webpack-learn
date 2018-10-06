@@ -19,7 +19,9 @@ module.exports = {
                     {
                         loader: 'style-loader',
                         options: {
-                            insertInto: '#app'
+                            insertInto: '#app',
+                            singleton: true,
+                            transform: './css.transform.js'
                         }
                     },
                     {
