@@ -572,6 +572,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
+var app = document.getElementById('app')
+app.innerHTML = '<div class="'+ __WEBPACK_IMPORTED_MODULE_0__css_base_css___default.a.box +'"></div>'
+
+
 /***/ }),
 /* 4 */
 /***/ (function(module, exports, __webpack_require__) {
@@ -586,10 +590,10 @@ var insertInto;
 
 transform = __webpack_require__(1);
 
-var options = {"insertInto":"#app","singleton":true,"transform":"./css.transform.js","hmr":true}
+var options = {"singleton":true,"transform":"./css.transform.js","hmr":true}
 
 options.transform = transform
-options.insertInto = "#app";
+options.insertInto = undefined;
 
 var update = __webpack_require__(2)(content, options);
 
@@ -631,10 +635,12 @@ exports = module.exports = __webpack_require__(0)(false);
 
 
 // module
-exports.push([module.i, "* {\n    margin: 0;\n    padding: 0;\n}\n\nhtml {\n    background: red;\n}", ""]);
+exports.push([module.i, "* {\n    margin: 0;\n    padding: 0;\n}\n\nhtml {\n    background: red;\n}\n\n._2SaOUZhroVCSeUHstDhYSi {\n    height: 200px;\n    width: 200px;\n    border: 4px;\n    background: #333;\n}\n", ""]);
 
 // exports
-
+exports.locals = {
+	"box": "_2SaOUZhroVCSeUHstDhYSi"
+};
 
 /***/ }),
 /* 6 */
@@ -745,10 +751,10 @@ var insertInto;
 
 transform = __webpack_require__(1);
 
-var options = {"insertInto":"#app","singleton":true,"transform":"./css.transform.js","hmr":true}
+var options = {"singleton":true,"transform":"./css.transform.js","hmr":true}
 
 options.transform = transform
-options.insertInto = "#app";
+options.insertInto = undefined;
 
 var update = __webpack_require__(2)(content, options);
 
@@ -790,10 +796,12 @@ exports = module.exports = __webpack_require__(0)(false);
 
 
 // module
-exports.push([module.i, "html {\n    background: blue;\n}", ""]);
+exports.push([module.i, "html {\n    background: blue;\n}\n\n._1kVAmTXnx7R7w13Z32JLyB {\n    border: 2px solid #ccc;\n}", ""]);
 
 // exports
-
+exports.locals = {
+	"bigBox": "_1kVAmTXnx7R7w13Z32JLyB"
+};
 
 /***/ })
 /******/ ]);
