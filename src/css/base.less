@@ -1,0 +1,17 @@
+@homeColor: #333;
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background: @homeColor;
+}
+
+.box {
+    composes: bigBox from './common.less';
+    height: 200px;
+    width: 200px;
+    border-radius: 4px;
+    background: #333;
+}
