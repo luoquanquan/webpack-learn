@@ -72,11 +72,11 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "html {\n    background: blue;\n}\n\n._1kVAmTXnx7R7w13Z32JLyB {\n    border: 2px solid #ccc;\n}", ""]);
+exports.push([module.i, "html {\n    background: blue;\n}\n\n.src-css-common__bigBox-1kVAm {\n    border: 2px solid #ccc;\n}", ""]);
 
 // exports
 exports.locals = {
-	"bigBox": "_1kVAmTXnx7R7w13Z32JLyB"
+	"bigBox": "src-css-common__bigBox-1kVAm"
 };
 
 /***/ }),
@@ -651,11 +651,11 @@ exports = module.exports = __webpack_require__(1)(false);
 exports.i(__webpack_require__(0), undefined);
 
 // module
-exports.push([module.i, "* {\n    margin: 0;\n    padding: 0;\n}\n\nhtml {\n    background: red;\n}\n\n._2SaOUZhroVCSeUHstDhYSi {\n    height: 200px;\n    width: 200px;\n    border-radius: 4px;\n    background: #333\n}\n", ""]);
+exports.push([module.i, "* {\n    margin: 0;\n    padding: 0;\n}\n\nhtml {\n    background: red;\n}\n\n.src-css-base__box-2SaOU {\n    height: 200px;\n    width: 200px;\n    border-radius: 4px;\n    background: #333;\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"box": "_2SaOUZhroVCSeUHstDhYSi " + __webpack_require__(0).locals["bigBox"] + ""
+	"box": "src-css-base__box-2SaOU " + __webpack_require__(0).locals["bigBox"] + ""
 };
 
 /***/ }),
