@@ -13,3 +13,9 @@ html {
   background: #333;
   transition: transform 1s;
 }
+:root {
+  --mainColor: red;
+}
+a {
+  color: var(--mainColor);
+}
