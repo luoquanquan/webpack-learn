@@ -60,11 +60,27 @@
 /******/ 	__webpack_require__.p = "./dist/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(1)(false);
+// imports
+
+
+// module
+exports.push([module.i, "html {\n    background: blue;\n}\n\n._1kVAmTXnx7R7w13Z32JLyB {\n    border: 2px solid #ccc;\n}", ""]);
+
+// exports
+exports.locals = {
+	"bigBox": "_1kVAmTXnx7R7w13Z32JLyB"
+};
+
+/***/ }),
+/* 1 */
 /***/ (function(module, exports) {
 
 /*
@@ -146,7 +162,7 @@ function toComment(sourceMap) {
 
 
 /***/ }),
-/* 1 */
+/* 2 */
 /***/ (function(module, exports) {
 
 module.exports = css => {
@@ -156,7 +172,7 @@ module.exports = css => {
 }
 
 /***/ }),
-/* 2 */
+/* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -225,7 +241,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__(6);
+var	fixUrls = __webpack_require__(7);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -560,14 +576,14 @@ function updateLink (link, options, obj) {
 
 
 /***/ }),
-/* 3 */
+/* 4 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__css_base_css__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__css_base_css__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__css_base_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__css_base_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__css_common_css__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__css_common_css__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__css_common_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__css_common_css__);
 
 
@@ -577,25 +593,25 @@ app.innerHTML = '<div class="'+ __WEBPACK_IMPORTED_MODULE_0__css_base_css___defa
 
 
 /***/ }),
-/* 4 */
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(5);
+var content = __webpack_require__(6);
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
 var transform;
 var insertInto;
 
-transform = __webpack_require__(1);
+transform = __webpack_require__(2);
 
 var options = {"singleton":true,"transform":"./css.transform.js","hmr":true}
 
 options.transform = transform
 options.insertInto = undefined;
 
-var update = __webpack_require__(2)(content, options);
+var update = __webpack_require__(3)(content, options);
 
 if(content.locals) module.exports = content.locals;
 
@@ -627,23 +643,23 @@ if(false) {
 }
 
 /***/ }),
-/* 5 */
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(0)(false);
+exports = module.exports = __webpack_require__(1)(false);
 // imports
-
+exports.i(__webpack_require__(0), undefined);
 
 // module
-exports.push([module.i, "* {\n    margin: 0;\n    padding: 0;\n}\n\nhtml {\n    background: red;\n}\n\n._2SaOUZhroVCSeUHstDhYSi {\n    height: 200px;\n    width: 200px;\n    border: 4px;\n    background: #333;\n}\n", ""]);
+exports.push([module.i, "* {\n    margin: 0;\n    padding: 0;\n}\n\nhtml {\n    background: red;\n}\n\n._2SaOUZhroVCSeUHstDhYSi {\n    height: 200px;\n    width: 200px;\n    border-radius: 4px;\n    background: #333\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"box": "_2SaOUZhroVCSeUHstDhYSi"
+	"box": "_2SaOUZhroVCSeUHstDhYSi " + __webpack_require__(0).locals["bigBox"] + ""
 };
 
 /***/ }),
-/* 6 */
+/* 7 */
 /***/ (function(module, exports) {
 
 
@@ -738,25 +754,25 @@ module.exports = function (css) {
 
 
 /***/ }),
-/* 7 */
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(8);
+var content = __webpack_require__(0);
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
 var transform;
 var insertInto;
 
-transform = __webpack_require__(1);
+transform = __webpack_require__(2);
 
 var options = {"singleton":true,"transform":"./css.transform.js","hmr":true}
 
 options.transform = transform
 options.insertInto = undefined;
 
-var update = __webpack_require__(2)(content, options);
+var update = __webpack_require__(3)(content, options);
 
 if(content.locals) module.exports = content.locals;
 
@@ -786,22 +802,6 @@ if(false) {
 
 	module.hot.dispose(function() { update(); });
 }
-
-/***/ }),
-/* 8 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(0)(false);
-// imports
-
-
-// module
-exports.push([module.i, "html {\n    background: blue;\n}\n\n._1kVAmTXnx7R7w13Z32JLyB {\n    border: 2px solid #ccc;\n}", ""]);
-
-// exports
-exports.locals = {
-	"bigBox": "_1kVAmTXnx7R7w13Z32JLyB"
-};
 
 /***/ })
 /******/ ]);

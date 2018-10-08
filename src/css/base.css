@@ -10,6 +10,7 @@ html {
 .box {
     height: 200px;
     width: 200px;
-    border: 4px;
+    border-radius: 4px;
     background: #333;
+    composes: bigBox from './common.css'
 }
