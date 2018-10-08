@@ -41,7 +41,8 @@ module.exports = {
     },
     plugins: [
         new ExtractTextWebpackPlugin({
-            filename: '[name].min.css'
+            filename: '[name].min.css',
+            allChunks: true // true 提取所有的 css 文件, false (默认)只提取初始化时候引入的 css 文件
         })
     ]
 }
