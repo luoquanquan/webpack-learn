@@ -67,7 +67,7 @@ module.exports = {
         new PurifyCss({
             paths: glob.sync([
                 path.join(__dirname, './index.html'),
-                
+                path.join(__dirname, './src/app.js'),
             ])
         }),
         new webpack.optimize.UglifyJsPlugin()
