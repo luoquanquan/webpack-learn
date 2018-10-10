@@ -1,0 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background: #333;
+}
+
+.bigBox {
+  height: 400px;
+  width: 400px;
+  border: 4px;
+}

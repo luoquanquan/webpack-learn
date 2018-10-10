@@ -1,6 +1,8 @@
 const webpack = require('webpack')
 const ExtractTextWebpackPlugin = require('extract-text-webpack-plugin')
-const BabiliPlugin = require("babili-webpack-plugin");
+const PurifyCss = require('purifycss-webpack')
+const glob = require('glob-all')
+
 const path = require('path')
 
 module.exports = {
@@ -60,6 +62,13 @@ module.exports = {
         new ExtractTextWebpackPlugin({
             filename: '[name].min.css',
             allChunks: true // true 提取所有的 css 文件, false (默认)只提取初始化时候引入的 css 文件
+        }),
+        // puriry 要在 EX 后边
+        new PurifyCss({
+            paths: glob.sync([
+                path.join(__dirname, './index.html'),
+                
+            ])
         }),
         new webpack.optimize.UglifyJsPlugin()
         // new BabiliPlugin()
