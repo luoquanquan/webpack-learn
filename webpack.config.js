@@ -1,5 +1,6 @@
 const webpack = require('webpack')
 const ExtractTextWebpackPlugin = require('extract-text-webpack-plugin')
+const BabiliPlugin = require("babili-webpack-plugin");
 const path = require('path')
 
 module.exports = {
@@ -27,9 +28,9 @@ module.exports = {
                 use: [{
                         loader: 'css-loader',
                         options: {
-                            modules: true,
-                            minimize: true,
-                            localIdentName: '[path][name]__[local]-[hash:base64:5]'
+                            // modules: true,
+                            // minimize: true,
+                            // localIdentName: '[path][name]__[local]-[hash:base64:5]'
                         }
                     },
                     {
@@ -47,17 +48,13 @@ module.exports = {
                     }
                 ]
             })
-        },{
+        },
+        {
             test: /\.js$/,
             exclude: /node_modules/,
-            use: {
-                loader: 'babel-loader',
-                options: {
-                    presets: ['env'],
-                    plugins: ['lodash']
-                }
-            }
-        }]
+            use: 'babel-loader'
+        }
+    ]
     },
     plugins: [
         new ExtractTextWebpackPlugin({
@@ -65,5 +62,6 @@ module.exports = {
             allChunks: true // true 提取所有的 css 文件, false (默认)只提取初始化时候引入的 css 文件
         }),
         new webpack.optimize.UglifyJsPlugin()
+        // new BabiliPlugin()
     ]
 }
