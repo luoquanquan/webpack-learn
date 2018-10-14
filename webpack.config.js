@@ -71,7 +71,11 @@ module.exports = {
             use: {
                 loader: 'url-loader',
                 options: {
-                    limit: 10000
+                    limit: 1000,
+                    publicPath: 'images/',
+                    name: '[name]-[hash:4].[ext]',
+                    // useRelativePath: true,
+                    outputPath: 'images/'
                 }
             }
 
