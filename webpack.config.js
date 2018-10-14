@@ -59,13 +59,19 @@ module.exports = {
         },
         {
             test: /\.(png|jpg|jpeg|gif)$/,
+            // use: {
+            //     loader: 'file-loader',
+            //     options: {
+            //         publicPath: 'images/',
+            //         name: '[name]-[hash:4].[ext]',
+            //         // useRelativePath: true,
+            //         outputPath: 'images/'
+            //     }
+            // }
             use: {
-                loader: 'file-loader',
+                loader: 'url-loader',
                 options: {
-                    publicPath: 'images/',
-                    name: '[name]-[hash:4].[ext]',
-                    // useRelativePath: true,
-                    outputPath: 'images/'
+                    limit: 1000
                 }
             }
 
