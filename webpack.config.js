@@ -68,18 +68,28 @@ module.exports = {
             //         outputPath: 'images/'
             //     }
             // }
-            use: {
-                loader: 'url-loader',
-                options: {
-                    limit: 1000,
-                    publicPath: 'images/',
-                    name: '[name]-[hash:4].[ext]',
-                    // useRelativePath: true,
-                    outputPath: 'images/'
+            use: [
+                {
+                    loader: 'url-loader',
+                    options: {
+                        limit: 1000,
+                        publicPath: 'images/',
+                        name: '[name]-[hash:4].[ext]',
+                        // useRelativePath: true,
+                        outputPath: 'images/'
+                    }
+                },
+                {
+                    loader: 'img-loader',
+                    options: {
+                        pngquant: {
+                            quality: 1
+                        }
+                    }
                 }
-            }
-
+            ]
         }
+
     ]
     },
     plugins: [
