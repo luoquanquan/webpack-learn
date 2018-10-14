@@ -1,11 +1,6 @@
-@homeColor: #333;
 * {
     margin: 0;
     padding: 0;
-}
-
-html {
-    background: @homeColor;
 }
 
 .box {
@@ -14,19 +9,29 @@ html {
     border-radius: 4px;
     background: #333;
     transition: transform 1s;
-
 }
-
 .bigBox {
     height: 400px;
     width: 400px;
     border: 4px;
-}
+    div {
+        width: 128px;
+        height: 128px;
+        float: left;
+    }
+    .count1 {
+        background: url(../assets/imgs/01.png) no-repeat;
+    }
 
-:root {
-    --mainColor: red;
-}
+    .count2 {
+        background: url(../assets/imgs/02.png) no-repeat;
+    }
 
-a {
-    color: var(--mainColor);
+    .count3 {
+        background: url(../assets/imgs/03.png) no-repeat;
+    }
+
+    .count4 {
+        background: url(../assets/imgs/04.png) no-repeat;
+    }
 }

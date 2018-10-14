@@ -3,27 +3,30 @@
   padding: 0;
 }
 
-html {
-  background: #333;
-}
-
-.box {
-  height: 200px;
-  width: 200px;
-  border-radius: 4px;
-  background: #333;
-  -webkit-transition: -webkit-transform 1s;
-  transition: -webkit-transform 1s;
-  transition: transform 1s;
-  transition: transform 1s, -webkit-transform 1s;
-}
-
 .bigBox {
   height: 400px;
   width: 400px;
   border: 4px;
 }
 
-a {
-  color: red;
+.bigBox div {
+  width: 128px;
+  height: 128px;
+  float: left;
+}
+
+.bigBox .count1 {
+  background: url(./dist/d8c225f6bb97e71d67187a70539461ca.png) no-repeat;
+}
+
+.bigBox .count2 {
+  background: url(./dist/277204f42c6f4aae0f5e4b0bae8e51d9.png) no-repeat;
+}
+
+.bigBox .count3 {
+  background: url(./dist/3f2d7feb80c0b987cc849192b5c221f4.png) no-repeat;
+}
+
+.bigBox .count4 {
+  background: url(./dist/e720706c2381505e20a3ca9b74e8ae86.png) no-repeat;
 }
