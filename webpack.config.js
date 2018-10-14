@@ -1,6 +1,7 @@
 const webpack = require('webpack')
 const ExtractTextWebpackPlugin = require('extract-text-webpack-plugin')
 const PurifyCss = require('purifycss-webpack')
+const CleanWebpackPlugin = require('clean-webpack-plugin')
 const glob = require('glob-all')
 
 const path = require('path')
@@ -11,7 +12,7 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
-        publicPath: './dist/',
+        publicPath: '',
         filename: '[name].bundle.js',
         chunkFilename: '[name].chunk.js'
     },
@@ -59,13 +60,20 @@ module.exports = {
         {
             test: /\.(png|jpg|jpeg|gif)$/,
             use: {
-                loader: 'file-loader'
+                loader: 'file-loader',
+                options: {
+                    publicPath: 'images/',
+                    name: '[name]-[hash:4].[ext]',
+                    // useRelativePath: true,
+                    outputPath: 'images/'
+                }
             }
 
         }
     ]
     },
     plugins: [
+        new CleanWebpackPlugin(['dist']),
         new ExtractTextWebpackPlugin({
             filename: '[name].min.css',
             allChunks: true // true 提取所有的 css 文件, false (默认)只提取初始化时候引入的 css 文件
