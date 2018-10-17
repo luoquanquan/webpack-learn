@@ -31,3 +31,16 @@
 .bigBox .count4 {
   background: url(../assets/imgs/04.png) no-repeat;
 }
+@font-face {
+  font-family: "fontAwesome";
+  src: url('../assets/font/fontawesome-webfont.eot'), url('../assets/font/fontawesome-webfont.woff'), url('../assets/font/fontawesome-webfont.ttf'), url('../assets/font/FontAwesome.otf'), url('../assets/font/fontawesome-webfont.svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.fa {
+  display: inline-block;
+  font-family: 'fontAwesome';
+}
+.fa-folder::before {
+  content: "\f07b";
+}

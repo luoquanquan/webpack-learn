@@ -18,83 +18,91 @@ module.exports = {
     },
     module: {
         rules: [{
-            test: /\.less$/,
-            use: ExtractTextWebpackPlugin.extract({
-                fallback: {
-                    loader: 'style-loader',
-                    options: {
-                        // insertInto: '#app',
-                        singleton: true,
-                        transform: './css.transform.js'
-                    }
-                },
+                test: /\.less$/,
+                use: ExtractTextWebpackPlugin.extract({
+                    fallback: {
+                        loader: 'style-loader',
+                        options: {
+                            // insertInto: '#app',
+                            singleton: true,
+                            transform: './css.transform.js'
+                        }
+                    },
+                    use: [{
+                            loader: 'css-loader',
+                            options: {
+                                // modules: true,
+                                // minimize: true,
+                                // localIdentName: '[path][name]__[local]-[hash:base64:5]'
+                            }
+                        },
+                        {
+                            loader: 'postcss-loader',
+                            options: {
+                                ident: 'postcss',
+                                plugins: [
+                                    // require('autoprefixer')(),
+                                    require('postcss-sprites')({
+                                        spritePath: 'dist/assets',
+                                        retina: true // 处理视网膜屏
+                                    }),
+                                    require('postcss-cssnext')()
+                                ]
+                            }
+                        },
+                        {
+                            loader: 'less-loader'
+                        }
+                    ]
+                })
+            },
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                use: 'babel-loader'
+            },
+            {
+                test: /\.(png|jpg|jpeg|gif)$/,
+                // use: {
+                //     loader: 'file-loader',
+                //     options: {
+                //         publicPath: 'images/',
+                //         name: '[name]-[hash:4].[ext]',
+                //         // useRelativePath: true,
+                //         outputPath: 'images/'
+                //     }
+                // }
                 use: [{
-                        loader: 'css-loader',
+                        loader: 'url-loader',
                         options: {
-                            // modules: true,
-                            // minimize: true,
-                            // localIdentName: '[path][name]__[local]-[hash:base64:5]'
+                            limit: 1000,
+                            publicPath: 'images/',
+                            name: '[name]-[hash:4].[ext]',
+                            // useRelativePath: true,
+                            outputPath: 'images/'
                         }
                     },
                     {
-                        loader: 'postcss-loader',
+                        loader: 'img-loader',
                         options: {
-                            ident: 'postcss',
-                            plugins: [
-                                // require('autoprefixer')(),
-                                require('postcss-sprites')({
-                                    spritePath: 'dist/assets',
-                                    retina: true // 处理视网膜屏
-                                }),
-                                require('postcss-cssnext')()
-                            ]
+                            pngquant: {
+                                quality: 1
+                            }
                         }
-                    },
-                    {
-                        loader: 'less-loader'
                     }
                 ]
-            })
-        },
-        {
-            test: /\.js$/,
-            exclude: /node_modules/,
-            use: 'babel-loader'
-        },
-        {
-            test: /\.(png|jpg|jpeg|gif)$/,
-            // use: {
-            //     loader: 'file-loader',
-            //     options: {
-            //         publicPath: 'images/',
-            //         name: '[name]-[hash:4].[ext]',
-            //         // useRelativePath: true,
-            //         outputPath: 'images/'
-            //     }
-            // }
-            use: [
-                {
-                    loader: 'url-loader',
-                    options: {
-                        limit: 1000,
-                        publicPath: 'images/',
-                        name: '[name]-[hash:4].[ext]',
-                        // useRelativePath: true,
-                        outputPath: 'images/'
-                    }
-                },
-                {
-                    loader: 'img-loader',
-                    options: {
-                        pngquant: {
-                            quality: 1
+            },
+            {
+                test: /\.(eot|woff2?|ttf|svg|otf)/,
+                use: {
+                        loader: 'url-loader',
+                        options: {
+                            limit: 10,
                         }
                     }
-                }
-            ]
-        }
+            }
 
-    ]
+        ]
     },
     plugins: [
         new CleanWebpackPlugin(['dist']),
