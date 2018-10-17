@@ -43,7 +43,8 @@ module.exports = {
                             plugins: [
                                 // require('autoprefixer')(),
                                 require('postcss-sprites')({
-                                    spritePath: 'dist/assets'
+                                    spritePath: 'dist/assets',
+                                    retina: true // 处理视网膜屏
                                 }),
                                 require('postcss-cssnext')()
                             ]
