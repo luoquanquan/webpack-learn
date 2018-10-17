@@ -16,17 +16,25 @@
 }
 
 .bigBox .count1 {
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAABYAgMAAAARheY8AAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAJUExURVBQUEdwTFBQUADjrUkAAAADdFJOU/gAY5Ua1lQAAABvSURBVDjLYwgFg7BVoaEhDBB2AAOC7YDEZkCwI5DYCUjsBgQ7hAHBTkBiMyDYEUhsBwQ7jMkBzk5gRehlmAoXj+BEmNkwNRQmHsKIsCtBNBQu7oTmBgccbhsVHxUfseIRHR3A7MugpKTAACwCYAAA1jLn3bs5YLQAAAAASUVORK5CYII=) no-repeat;
+  background-image: url(images/sprite-7df4.png);
+  background-position: -60px -88px;
+  background-size: 116px 178px;
 }
 
 .bigBox .count2 {
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAABYAgMAAADdHNzXAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAJUExURVBQUEdwTFBQUADjrUkAAAADdFJOU/0Ac45mBNsAAAE9SURBVDjLldMxbsMwDAXQbwEecgAdwUNvIfQEGixBo5CttxB6B+9ZuviUlShKJtHWQAnEzotMMSEVBIr41e+g6wvAMZlxvmAOZsRbfdVLZ24PZpjOSG8SsBETHpU72q3SYaUNACKIgWqhfbwxt8rELO0pBM90wFKZL5pKdxGVhXfObWu0Hf+iveX2g4ULNa5U1zb6zoTePl4NZ28qr47Imr+sbv+hveVxy3CROym4aD4EeSiCm6YVHOOeNIKx1VFcBfdxkHokOpW4OmeC4iKZaXC4foGVLAiSlDoZ+WDOb2ElPYJkXhTdqthTByPkvywko+hXRWcVS5CMvWr46Eyc+uQDaBVH6nvnorhzavgkek4NhuhGSzpH6k6cqZ44UwvRzakRzdkDxDrKEY1es2hCMWlmzaIYoZg0s2a54zemuiKX1zxhTwAAAABJRU5ErkJggg==) no-repeat;
+  background-image: url(images/sprite-7df4.png);
+  background-position: -60px 0px;
+  background-size: 116px 178px;
 }
 
 .bigBox .count3 {
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADoAAABaAgMAAACUIa3hAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAJUExURVVVVVBQUFBQUJVxPMUAAAADdFJOUwH9hcd0RrYAAAFeSURBVDjLrZQ7bsMwDIZpARrcOd6zqGh7Ch3BQ2gYnjQGPYXmznXRsUuG5JTRg7IowmhQoFqEzyR/8SEZIC31AnxdEXGp+IrvN8S5oIo2g+iJDbr4cXPIlrU49IhxGzC6haUz6xIwbDxROFJYFiDuwm7T6ZUd7UDfR2JPPDOdPT7tcPeAFTsvcih0bvgJfxreusZaSLqSR8Y9loZVtow15cF44mxa+dp/WmsbroR7V+dLco0Z1qkx97noTW0VeG6R366gtXxcmZyOxkstZvUpn3J+N1P+FKH8boJ9W18syP1WMIj+xQZZwU40dBR8EiwHgpL9A7aC3T/z+Af/YcduhV2yh6Pg74YBDqJfB97v0M9nzmFgms0rpq8945BeZ9l7Czbl2PuK+1zvRxrXZ30/qRumlpektC3H52mqsRxHSl9FjjIxLoeXy6CmnM2WqFl8eAHsRVza3y3A26043wHtxpJAphc4rgAAAABJRU5ErkJggg==) no-repeat;
+  background-image: url(images/sprite-7df4.png);
+  background-position: 0px -88px;
+  background-size: 116px 178px;
 }
 
 .bigBox .count4 {
-  background: url(images/2-614b.png) no-repeat;
+  background-image: url(images/sprite-7df4.png);
+  background-position: 0px 0px;
+  background-size: 116px 178px;
 }
