@@ -42,7 +42,9 @@ module.exports = {
                             ident: 'postcss',
                             plugins: [
                                 // require('autoprefixer')(),
-                                require('postcss-sprites')(),
+                                require('postcss-sprites')({
+                                    spritePath: 'dist/assets'
+                                }),
                                 require('postcss-cssnext')()
                             ]
                         }
